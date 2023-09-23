@@ -1,2 +1,2 @@
 # Recipe_Finder
-Recipe by ingredients finer
+Python and Flask web application to find recipe ideas with ingredients.
