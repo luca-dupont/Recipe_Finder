@@ -1,4 +1,4 @@
-# Music Web App
+# Recipe Finder
 Python and Flask app to find recipes based on your ingredients.
 
 ---
