@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Ideas</title>
+    <script src="https://use.fontawesome.com/929a5d9be6.js"></script>
+    <style>
+        .search-button {
+            margin: 1.2rem 0;
+            display:flex;
+            align-items: stretch; 
+            align-content: stretch;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        .input {
+            border-top-left-radius:2rem;
+            border-bottom-left-radius:2rem;
+            color:rgb(255, 149, 0);
+            width: 500px;
+            border: 1.5px solid;
+        }
+        .input::placeholder {
+            color:rgb(255, 149, 0);
+            font-size: 1rem;
+            font-weight: bold;
+            text-indent: 10px;
+        }
+        .input[type="text"] {
+            text-indent: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: rgb(255, 149, 0);
+        }
+        .input:focus {
+            outline: none;
+        }
+        .button {
+            border-top-right-radius:2rem;
+            border-bottom-right-radius:2rem;
+            color:white;
+            background-color: rgb(255, 149, 0);
+            width: 55px;
+            height: 55px;
+            border: 1.5px solid;
+            border-color: rgb(255, 149, 0);
+        }
+        .button:hover {
+            background-color: rgb(227, 148, 0);
+            color:white;
+            cursor:pointer;
+            border-color: rgb(227, 148, 0);
+        }
+        .link {
+            text-decoration: none;
+            color:white;
+        }
+        .RecipeTitle {
+            max-width: 200px;
+            text-align: center;
+            margin: 10px;
+            padding-top: 10px;
+            color: rgb(235,235,235);
+        }
+        .recipe_container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-around; 
+            align-content: space-around;
+            align-items: center;
+            margin-left: 75px;
+            margin-right: 75px;
+            gap: 50px;
+            align-items:last baseline;
+        }
+        .recipe {
+            background-color: rgb(255, 149, 0);
+            border-radius: 2rem;
+        }
+        .picture {
+            width:160px;height:160px;
+            margin: 10px;
+            border-radius: 1rem;
+        }
+
+
+    </style>
+</head>
+<body style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center;">
+    <h1 style="text-align:center;font-family:inherit, sans-serif;size:120px;padding-top: 20px;text-decoration: underline;">Find Meals For Your Ingredients</h1>
+    <form action="" method="post">
+        <div class="search-button">
+            <input style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" type="text" id="ingredient" name="ingredient" placeholder="Enter an ingredient"class='input'>
+            <button type="submit" name='submit' value="Submit" class="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </form>
+    <div>
+        <h2>
+            Your Recipes:
+        </h2>
+        <div class="recipe_container">
+            {{ html|safe }}
+        </div>
+    </div>
+</body>
+</html>
